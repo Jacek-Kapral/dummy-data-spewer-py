@@ -38,12 +38,12 @@ def main():
 
         except (requests.exceptions.RequestException, Exception) as e:
             # Server does not respond, dump info to console
-            print(f"\n" + "!"*40)
+            print(f"\n" + "_"*40)
             print(f"[{dane['timestamp']}] BŁĄD POŁĄCZENIA!")
             print(f"Komunikat: {e}")
             print("DANE LOKALNE (JSON):")
             print(json.dumps(dane, indent=4, ensure_ascii=False))
-            print("!"*40 + "\n")
+            print("_"*40 + "\n")
 
         time.sleep(INTERVAL)
 
